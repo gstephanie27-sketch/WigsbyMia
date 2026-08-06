@@ -30,6 +30,10 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--dark);overfl
 .btn-outline{display:inline-flex;align-items:center;gap:10px;font-family:'Jost',sans-serif;font-size:12px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);text-decoration:none;background:none;border:none;cursor:pointer;}
 .btn-outline::after{content:'';display:block;width:26px;height:.5px;background:var(--gold-light);}
 .btn-book{display:inline-block;background:var(--ruby);color:var(--cream);font-family:'Jost',sans-serif;font-size:12px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;padding:14px 34px;text-decoration:none;border:none;cursor:pointer;transition:background .2s;}
+.message-float{position:fixed;right:22px;bottom:22px;z-index:1000;display:inline-flex;align-items:center;gap:9px;background:var(--ruby);color:var(--cream);border:1px solid rgba(255,255,255,.28);box-shadow:0 8px 24px rgba(42,26,26,.3);padding:13px 19px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s;}
+.message-float:hover{background:var(--dark);transform:translateY(-2px);box-shadow:0 11px 28px rgba(42,26,26,.38);}
+.message-float svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;}
+@media(max-width:600px){.message-float{right:14px;bottom:14px;padding:12px 15px;font-size:10px;letter-spacing:.15em;}}
 .btn-book:hover{background:#6a2035;}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;transition:background .3s;background:linear-gradient(to bottom,rgba(20,10,10,.55),transparent);}
 .nav.scrolled{background:rgba(42,26,26,.96);backdrop-filter:blur(8px);}
@@ -244,5 +248,6 @@ const tog=document.getElementById('navToggle');const nl=document.getElementById(
 if(tog&&nl){tog.addEventListener('click',()=>nl.classList.toggle('open'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));document.addEventListener('click',e=>{if(!nav.contains(e.target))nl.classList.remove('open');});}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();const h=nav?nav.offsetHeight:0;window.scrollTo({top:t.getBoundingClientRect().top+scrollY-h-16,behavior:'smooth'});}});});
 </script>
+<a class="message-float" href="mailto:wigsbymiakelly@gmail.com?subject=Wigs%20by%20Mia%20Inquiry" aria-label="Message Wigs by Mia by email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v13H4z"/><path d="m4.5 6 7.5 6 7.5-6"/></svg><span>Message Us</span></a>
 </body>
 </html>
