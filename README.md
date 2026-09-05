@@ -11,7 +11,7 @@ Open Terminal in this folder and run:
 npm run dev
 ```
 
-Then open the local address shown in Terminal. Keep Terminal open while editing.
+Then open [http://localhost:3000](http://localhost:3000). Keep Terminal open while editing.
 
 ## Edit wigs
 

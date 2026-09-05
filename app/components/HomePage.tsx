@@ -263,7 +263,32 @@ const fifthteenthNewWig: Wig = {
   ],
 };
 
-const wigs = [firstNewWig, secondNewWig, thirdNewWig, fourthNewWig, fifthNewWig, seventhNewWig, eighthNewWig, ninthNewWig, tenthNewWig, eleventhNewWig, twelfthNewWig, thirteenthNewWig, fourteenthNewWig, fifthteenthNewWig];
+const sixthteenthNewWig: Wig = {
+  name: "Precilla",
+  collection: "",
+  price: "$810",
+  specs: ["13×4 Frontal", "26 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  images: [
+    { src: "/images/products/precilla-front.jpeg", label: "Front" },
+    { src: "/images/products/precilla-back.jpeg", label: "Back" },
+    { src: "/images/products/precilla-side.jpeg", label: "Side" },
+    { src: "/images/products/precilla-front2.jpeg", label: "Front" },
+  ],
+};
+const seventeenthNewWig: Wig = {
+  name: "Monica",
+  collection: "",
+  price: "$810",
+  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  images: [
+    { src: "/images/products/monica-front.jpeg", label: "Front" },
+    { src: "/images/products/monica-back.jpeg", label: "Back" },
+    { src: "/images/products/monica-back2.jpeg", label: "Back" },
+    { src: "/images/products/monica-back3.jpeg", label: "Back" },
+  ],
+};
+
+const wigs = [firstNewWig, secondNewWig, thirdNewWig, fourthNewWig, fifthNewWig, seventhNewWig, eighthNewWig, ninthNewWig, tenthNewWig, eleventhNewWig, twelfthNewWig, thirteenthNewWig, fourteenthNewWig, fifthteenthNewWig, sixthteenthNewWig, seventeenthNewWig];
 
 const faqGroups = [
   {

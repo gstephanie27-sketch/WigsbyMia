@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "check": "tsc --noEmit",
     "build": "vite build && mv dist/github-index.html dist/index.html && mv dist/github-contact.html dist/contact.html",
     "preview": "vite preview",
