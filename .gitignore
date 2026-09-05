@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.DS_Store
+.vite/
+*.log
+.env*
+!.env.example
+
+# Old root-level duplicates retained from the previous publishing setup
+/favicon.svg
+/file.svg
+/globe.svg
+/window.svg
+/videos/client-video-3.mov
