@@ -287,8 +287,41 @@ const seventeenthNewWig: Wig = {
     { src: "/images/products/monica-back3.jpeg", label: "Back" },
   ],
 };
+const eightteenthNewWig: Wig = {
+  name: "Rachel",
+  collection: "",
+  price: "$810",
+  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  images: [
+    { src: "/images/products/Rachel-front.jpeg", label: "Front" },
+    { src: "/images/products/Rachel-Back.jpeg", label: "Back" },
+    { src: "/images/products/Rachel-Side2.jpeg", label: "Side" },
+    { src: "/images/products/Rachel-side.jpeg", label: "Side" },
+  ],
+};
+const ninteenthNewWig: Wig = {
+  name: "Clair",
+  collection: "",
+  price: "$810",
+  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
+  images: [
+    { src: "/images/products/Clair-Front.jpeg", label: "Front" },
+    { src: "/images/products/Clair-Back.jpeg", label: "Back" },
+    { src: "/images/products/Clair-Side.jpeg", label: "Side" },
+  ],
+};
+const twentythNewWig: Wig = {
+  name: "Katie",
+  collection: "",
+  price: "$810",
+  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  images: [
+    { src: "/images/products/Katie-Front.jpeg", label: "Front" },
+    { src: "/images/products/Katie-Front2.jpeg", label: "Back" },
+  ],
+};
 
-const wigs = [firstNewWig, secondNewWig, thirdNewWig, fourthNewWig, fifthNewWig, seventhNewWig, eighthNewWig, ninthNewWig, tenthNewWig, eleventhNewWig, twelfthNewWig, thirteenthNewWig, fourteenthNewWig, fifthteenthNewWig, sixthteenthNewWig, seventeenthNewWig];
+const wigs = [firstNewWig, secondNewWig, thirdNewWig, fourthNewWig, fifthNewWig, seventhNewWig, eighthNewWig, ninthNewWig, tenthNewWig, eleventhNewWig, twelfthNewWig, thirteenthNewWig, fourteenthNewWig, fifthteenthNewWig, sixthteenthNewWig, seventeenthNewWig, eightteenthNewWig, ninteenthNewWig, twentythNewWig];
 
 const faqGroups = [
   {
