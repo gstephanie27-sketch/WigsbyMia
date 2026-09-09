@@ -1,0 +1,19 @@
+{
+  "name": "Test Wig",
+  "status": "Available",
+  "price": "810",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "22-inch Cap",
+  "images": [
+    {
+      "src": "/images/products/mtu4blv7-13svp0kf.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/mtu4c4qz-0dmmvj6s.jpeg",
+      "label": "Side"
+    }
+  ]
+}
