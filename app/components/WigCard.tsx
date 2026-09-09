@@ -12,6 +12,7 @@ export type Wig = {
   shopUrl?: string;
   comingSoon?: boolean;
   captype?:number;
+  availbility?:string;
 };
 
 export default function WigCard({ wig }: { wig: Wig }) {
@@ -71,6 +72,7 @@ export default function WigCard({ wig }: { wig: Wig }) {
       </div>
       <div className="wig-info">
         <h4 className="wig-name">{wig.name}</h4>
+        <h4 className="wig-availability">{wig.availbility}</h4>
         <div className="wig-specs">
           {(wig.specs ?? ["26 inches", "13×4 Frontal"]).map((spec) => <span className="spec-pill" key={spec}>{spec}</span>)}
         </div>

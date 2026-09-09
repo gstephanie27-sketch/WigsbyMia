@@ -87,6 +87,7 @@ const firstNewWig: Wig = {
   name: "Brooke",
   collection: "",
   price: "$810",
+  availbility:"Sold",
   specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
   images: [
     { src: "/images/products/honey-blonde-24-front-new.jpeg", label: "Front" },
@@ -205,6 +206,7 @@ const eleventhNewWig: Wig = {
   name: "Angela",
   collection: "",
   price: "$710",
+  availbility:"Sold",
   specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-inch Cap", "Added Band", "3 Combs", "Cap-Type 1"],
   images: [
     { src: "/images/products/taupe-blonde-24-front.jpeg", label: "Front" },
@@ -216,6 +218,7 @@ const twelfthNewWig: Wig = {
   name: "Snow",
   collection: "",
   price: "$810",
+  availbility:"Sold",
   specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
   images: [
     { src: "/images/products/platinum-blonde-24-front.jpeg", label: "Front" },
@@ -267,6 +270,7 @@ const sixthteenthNewWig: Wig = {
   name: "Precilla",
   collection: "",
   price: "$810",
+  availbility:"Sold",
   specs: ["13×4 Frontal", "26 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
   images: [
     { src: "/images/products/precilla-front.jpeg", label: "Front" },
@@ -291,7 +295,7 @@ const eightteenthNewWig: Wig = {
   name: "Rachel",
   collection: "",
   price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-22.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
   images: [
     { src: "/images/products/Rachel-front.jpeg", label: "Front" },
     { src: "/images/products/Rachel-Back.jpeg", label: "Back" },
@@ -314,7 +318,7 @@ const twentythNewWig: Wig = {
   name: "Katie",
   collection: "",
   price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
+  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-22.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
   images: [
     { src: "/images/products/Katie-Front.jpeg", label: "Front" },
     { src: "/images/products/Katie-Front2.jpeg", label: "Back" },
