@@ -1,0 +1,37 @@
+{
+  "name": "Jordan",
+  "collection": "",
+  "price": "$810",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 12,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "24 Inches",
+  "density": "180% Density",
+  "capSize": "21.5-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 2"
+  ],
+  "images": [
+    {
+      "src": "/images/products/honey-highlighted-brunette-24-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/honey-highlighted-brunette-24-full.jpeg",
+      "label": "Full View"
+    },
+    {
+      "src": "/images/products/honey-highlighted-brunette-24-side.jpeg",
+      "label": "Side"
+    },
+    {
+      "src": "/images/products/honey-highlighted-brunette-24-back.jpeg",
+      "label": "Back"
+    }
+  ]
+}

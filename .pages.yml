@@ -1,0 +1,87 @@
+media:
+  input: public/images/products
+  output: /images/products
+  extensions: [jpg, jpeg, png, webp]
+  rename: random
+content:
+  - name: wigs
+    label: Wigs
+    type: collection
+    path: content/wigs
+    format: json
+    filename: "{primary}.json"
+    subfolders: false
+    view:
+      primary: name
+      fields: [name, status, price, order]
+      sort: order
+      order: asc
+    fields:
+      - name: name
+        label: Wig name
+        type: string
+        required: true
+      - name: status
+        label: Availability
+        type: select
+        required: true
+        options:
+          values: [Available, Sold Out, Coming Soon, Hidden]
+        description: Hidden removes the wig from the storefront. Sold Out keeps it visible without an inquiry button.
+      - name: order
+        label: Display order
+        type: number
+        description: Lower numbers appear first. Leave blank to place at the end.
+      - name: collection
+        label: Collection
+        type: string
+      - name: price
+        label: Current price
+        type: string
+        description: Include the dollar sign, for example $810. Leave blank for Price on inquiry.
+      - name: originalPrice
+        label: Previous price (optional sale price comparison)
+        type: string
+        description: Shows a crossed-out previous price. Leave blank when not on sale.
+      - name: description
+        label: Description
+        type: text
+      - name: lace
+        label: Lace / frontal
+        type: string
+        description: Example 13×4 Frontal
+      - name: length
+        label: Length
+        type: string
+        description: Example 26 Inches
+      - name: density
+        label: Density
+        type: string
+        description: Example 200% Density
+      - name: capSize
+        label: Cap size
+        type: string
+        description: Example 21.5-inch Cap
+      - name: features
+        label: Cap type and additional features
+        type: string
+        list: true
+        description: Add one detail per item, such as Cap-Type 2, Adjustable Drawstring, Added Band, or 3 Combs.
+      - name: images
+        label: Photos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+        description: First photo is the cover. Reorder these items to change the gallery. Remove a photo from this list to remove it from this wig.
+        fields:
+          - name: src
+            label: Photo
+            type: image
+            required: true
+          - name: label
+            label: View / photo description
+            type: string
+            required: true
+            description: Example Front, Back, Side, or Cap construction

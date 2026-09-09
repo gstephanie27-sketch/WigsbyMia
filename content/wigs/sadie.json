@@ -1,0 +1,37 @@
+{
+  "name": "Sadie",
+  "collection": "",
+  "price": "$650",
+  "originalPrice": "$710",
+  "status": "Available",
+  "order": 2,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "24 Inches",
+  "density": "180% Density",
+  "capSize": "21.5-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 2"
+  ],
+  "images": [
+    {
+      "src": "/images/products/cool-blonde-24-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/cool-blonde-24-front-alt.jpeg",
+      "label": "Front Detail"
+    },
+    {
+      "src": "/images/products/cool-blonde-24-side.jpeg",
+      "label": "Side"
+    },
+    {
+      "src": "/images/products/cool-blonde-24-back.jpeg",
+      "label": "Back"
+    }
+  ]
+}

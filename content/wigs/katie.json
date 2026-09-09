@@ -1,0 +1,29 @@
+{
+  "name": "Katie",
+  "collection": "",
+  "price": "$810",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 19,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "22-22.5-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 1"
+  ],
+  "images": [
+    {
+      "src": "/images/products/Katie-Front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/Katie-Front2.jpeg",
+      "label": "Back"
+    }
+  ]
+}

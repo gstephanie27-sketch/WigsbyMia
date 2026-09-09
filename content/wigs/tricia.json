@@ -1,0 +1,49 @@
+{
+  "name": "Tricia",
+  "collection": "",
+  "price": "$810",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 5,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "24 Inches",
+  "density": "180% Density",
+  "capSize": "21.5-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 2"
+  ],
+  "images": [
+    {
+      "src": "/images/products/ash-blonde-money-piece-24-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/ash-blonde-money-piece-24-front-alt.jpeg",
+      "label": "Front Detail"
+    },
+    {
+      "src": "/images/products/ash-blonde-money-piece-24-side.jpeg",
+      "label": "Styled View"
+    },
+    {
+      "src": "/images/products/ash-blonde-money-piece-24-side-alt.jpeg",
+      "label": "Alternate View"
+    },
+    {
+      "src": "/images/products/beige-blonde-24-side.jpeg",
+      "label": "Side"
+    },
+    {
+      "src": "/images/products/beige-blonde-24-back.jpeg",
+      "label": "Back"
+    },
+    {
+      "src": "/images/products/beige-blonde-24-back-alt.jpeg",
+      "label": "Back Detail"
+    }
+  ]
+}

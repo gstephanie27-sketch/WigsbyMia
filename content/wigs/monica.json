@@ -1,0 +1,37 @@
+{
+  "name": "Monica",
+  "collection": "",
+  "price": "$810",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 16,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "21.5-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 1"
+  ],
+  "images": [
+    {
+      "src": "/images/products/monica-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/monica-back.jpeg",
+      "label": "Back"
+    },
+    {
+      "src": "/images/products/monica-back2.jpeg",
+      "label": "Back"
+    },
+    {
+      "src": "/images/products/monica-back3.jpeg",
+      "label": "Back"
+    }
+  ]
+}

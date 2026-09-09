@@ -1,0 +1,29 @@
+{
+  "name": "Skylar",
+  "collection": "",
+  "price": "$710",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 3,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "22-inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 1"
+  ],
+  "images": [
+    {
+      "src": "/images/products/rooted-blonde-24-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/rooted-blonde-24-side.jpeg",
+      "label": "Side"
+    }
+  ]
+}

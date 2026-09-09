@@ -1,0 +1,28 @@
+{
+  "name": "Bailey",
+  "collection": "",
+  "price": "$810",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 9,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "22-inch Cap",
+  "features": [
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 2"
+  ],
+  "images": [
+    {
+      "src": "/images/products/sandy-blonde-24-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/sandy-blonde-24-back-profile.jpeg",
+      "label": "Front"
+    }
+  ]
+}

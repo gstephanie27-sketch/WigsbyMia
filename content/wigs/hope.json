@@ -1,0 +1,33 @@
+{
+  "name": "Hope",
+  "collection": "",
+  "price": "$710",
+  "originalPrice": "",
+  "status": "Available",
+  "order": 13,
+  "description": "",
+  "lace": "13×4 Frontal",
+  "length": "26 Inches",
+  "density": "200% Density",
+  "capSize": "22 inch Cap",
+  "features": [
+    "Adjustable Drawstring",
+    "Added Band",
+    "3 Combs",
+    "Cap-Type 1"
+  ],
+  "images": [
+    {
+      "src": "/images/products/hope-front.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/hope-back.jpeg",
+      "label": "Front"
+    },
+    {
+      "src": "/images/products/rooted-blonde-24-back.jpeg",
+      "label": "Back"
+    }
+  ]
+}
