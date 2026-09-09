@@ -61,10 +61,10 @@ export function Nav({ contact = false }: { contact?: boolean }) {
           </li>
         ))}
         <li className="mobile-shop-link">
-          <a href="https://www.vagaro.com/miakelly/products" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Shop</a>
+          <a href="/#collections" target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>Shop</a>
         </li>
       </ul>
-      <a className="nav-cart" href="https://www.vagaro.com/miakelly/products" target="_blank" rel="noopener noreferrer">Shop</a>
+      <a className="nav-cart" href="/#collections" target="_blank" rel="noopener noreferrer">Shop</a>
       </nav>
     </>
   );
@@ -103,7 +103,7 @@ export function Footer() {
             <li><a href="https://www.instagram.com/wigsbymiakelly/" target="_blank" rel="noopener noreferrer">@wigsbymiakelly</a></li>
             <li><a href="https://www.facebook.com/mia.jenkins.142" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             <li><a href="tel:+16166341357">616-634-1357</a></li>
-            <li><a className="footer-book" href="https://www.vagaro.com/miakelly/services" target="_blank" rel="noopener noreferrer">Book an Appointment</a></li>
+            <li><a className="footer-book" href="mailto:wigsbymiakelly@gmail.com?subject=Appointment%20Inquiry" target="_blank" rel="noopener noreferrer">Book an Appointment</a></li>
           </ul>
         </div>
       </footer>

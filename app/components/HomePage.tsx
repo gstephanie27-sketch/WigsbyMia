@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Footer, Nav } from "./SiteChrome";
-import WigCard, { type Wig } from "./WigCard";
+import WigCard from "./WigCard";
+import { wigs } from "../catalog";
 
 function InstagramIcon() {
   return (
@@ -12,320 +13,6 @@ function InstagramIcon() {
     </span>
   );
 }
-
-const product = (
-  name: string,
-  collection: string,
-  price: string,
-  views: string[],
-  shopUrl: string,
-): Wig => ({
-  name,
-  collection,
-  price,
-  shopUrl,
-  images: views.map((view) => ({
-    src: `/images/${name.toLowerCase()}-${view.toLowerCase().replaceAll(" ", "-")}.png`,
-    label: view,
-  })),
-});
-
-const collections: { id: string; name: string; tone: string; wigs: Wig[] }[] = [
-  {
-    id: "collection-champagne",
-    name: "Champagne",
-    tone: "cgs-champ",
-    wigs: [
-      product("Naomi", "Champagne", "$710", ["Front", "Side", "Back", "Worn"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/naomi/Q7hacuxZ2sxHCipVHu53feM-fN7GPuK7fJMjseEGKc8="),
-      product("Mia", "Champagne", "$710", ["Front", "Closeup", "Back", "Two Styles"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/mia/GKzRZ8GJWoA0m989pzn~S7eO3uHFYEk9q2JuDRAVXzo="),
-      product("Victoria", "Champagne", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/victoria/lLB4SicLM2vncESsBEfs-aXud2LXTcKzl~J0-qlELyY="),
-      product("Heaven", "Champagne", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/heaven/wAa8BJSp-trbb4eusTvLZI4wxzo3imUZinlskBGz94E="),
-      product("Sabrina", "Champagne", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/sabrina/RFHeUfJ5plIYGhJhN0f5NCEKNxfxq6x55vpJwhD2uk8="),
-      product("Britney", "Champagne", "$710", ["Front", "Side", "Back", "Worn"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/britney/193090dhdNdlKfsZnI9H5CQoyLZl1mbOloAyvGyuC~I="),
-      product("Zara", "Champagne", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/zara/RkS4DkcOAudmXUfzWRrWvbK8sw9LLQ5EB4gKiwdKeYw="),
-      product("Honey", "Champagne", "$710", ["Front", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/honey/EGJGwWN5TmEuGnwEMiFb2TTHfnst4Lf829ozIIEbvvk="),
-    ],
-  },
-  {
-    id: "collection-espresso",
-    name: "Espresso",
-    tone: "cgs-esp",
-    wigs: [
-      product("Aria", "Espresso", "$710", ["Front", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/aria/m7Kfw~WDR7Oe6-X~fXKzC-azoxuGQDMk2VFkY5-U6co="),
-      product("Blair", "Espresso", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/blair/-A5wCCvTVMcx3WCIEspk3iiKSS~xms3sSIzERa1G34U="),
-      product("Bianca", "Espresso", "$710", ["Front", "Side", "Back", "Worn"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/bianca/1qONAiIxi9izrV1za-YWnslQG9UFbbb5D3vrusg468E="),
-      product("Rylee", "Espresso", "$710", ["Front", "Side", "Back", "Worn"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/raven/AEOeibBqZ~8byYx7UTcqieokwUX7j7-~tVXLf---bwI="),
-    ],
-  },
-  {
-    id: "collection-ruby",
-    name: "Ruby",
-    tone: "cgs-ruby",
-    wigs: [
-      product("Raven", "Ruby", "$710", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/raven/AEOeibBqZ~8byYx7UTcqieokwUX7j7-~tVXLf---bwI="),
-      { name: "Sienna", collection: "Ruby", comingSoon: true },
-      { name: "Harper", collection: "Ruby", comingSoon: true },
-      { name: "Scarlett", collection: "Ruby", comingSoon: true },
-    ],
-  },
-  {
-    id: "collection-rockstar",
-    name: "Rockstar",
-    tone: "cgs-rock",
-    wigs: [
-      product("Star", "Rockstar", "$810", ["Front", "Photo", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/star/tKiMbct3HCr61qgO3etUc6UeZLCf27xTaE0e9oLOaiY="),
-      product("Nova", "Rockstar", "$810", ["Front", "Side", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/nova/W4dbzxUj3akul~wbfPvaR6vZb-0vY5tm4o~OFWicTPQ="),
-      product("Twilight", "Rockstar", "$810", ["Front", "Back"], "https://www.vagaro.com/miakelly/products/wigs-by-mia/twilight/AZmMuF2VLlfgg8p33mmu9xR9cx~TuqFPFE~Y~LN9XB4="),
-      { name: "Moonlight", collection: "Rockstar", comingSoon: true },
-      { name: "Eclipse", collection: "Rockstar", comingSoon: true },
-      { name: "Celestial", collection: "Rockstar", comingSoon: true },
-    ],
-  },
-];
-
-const firstNewWig: Wig = {
-  name: "Brooke",
-  collection: "",
-  price: "$810",
-  availbility:"Sold",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/honey-blonde-24-front-new.jpeg", label: "Front" },
-    { src: "/images/products/honey-blonde-24-full-new.jpeg", label: "Full View" },
-    { src: "/images/products/honey-blonde-24-side.jpeg", label: "Side" },
-    { src: "/images/products/honey-blonde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const secondNewWig: Wig = {
-  name: "Sadie",
-  collection: "",
-  originalPrice: "$710",
-  price: "$650",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/cool-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/cool-blonde-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/cool-blonde-24-side.jpeg", label: "Side" },
-    { src: "/images/products/cool-blonde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const thirdNewWig: Wig = {
-  name: "Skylar",
-  collection: "",
-  price: "$710",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/rooted-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/rooted-blonde-24-side.jpeg", label: "Side" }
-    // { src: "/images/products/rooted-blonde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const fourthNewWig: Wig = {
-  name: "Isabelle",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/highlighted-brunette-24-front.jpeg", label: "Front" },
-    { src: "/images/products/highlighted-brunette-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/highlighted-brunette-24-side.jpeg", label: "Side" },
-    { src: "/images/products/highlighted-brunette-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const fifthNewWig: Wig = {
-  name: "Tricia",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/ash-blonde-money-piece-24-front.jpeg", label: "Front" },
-    { src: "/images/products/ash-blonde-money-piece-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/ash-blonde-money-piece-24-side.jpeg", label: "Styled View" },
-    { src: "/images/products/ash-blonde-money-piece-24-side-alt.jpeg", label: "Alternate View" },
-    { src: "/images/products/beige-blonde-24-side.jpeg", label: "Side" },
-    { src: "/images/products/beige-blonde-24-back.jpeg", label: "Back" },
-    { src: "/images/products/beige-blonde-24-back-alt.jpeg", label: "Back Detail" },
-  ],
-};
-
-const seventhNewWig: Wig = {
-  name: "Monica",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/golden-bronde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/golden-bronde-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/golden-bronde-24-side.jpeg", label: "Side" },
-    { src: "/images/products/golden-bronde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const eighthNewWig: Wig = {
-  name: "Molly",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/champagne-straight-24-front.jpeg", label: "Front" },
-    { src: "/images/products/champagne-straight-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/champagne-straight-24-back.jpeg", label: "Back" },
-    { src: "/images/products/champagne-straight-24-back-alt.jpeg", label: "Back Detail" },
-  ],
-};
-
-const ninthNewWig: Wig = {
-  name: "Erin",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/smoky-brunette-24-front.jpeg", label: "Front" },
-    { src: "/images/products/smoky-brunette-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const tenthNewWig: Wig = {
-  name: "Bailey",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-inch Cap", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/sandy-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/sandy-blonde-24-back-profile.jpeg", label: "Front" },
-    // { src: "/images/products/sandy-blonde-24-lace-front.jpeg", label: "Lace Front" },
-    // { src: "/images/products/sandy-blonde-24-side.jpeg", label: "Side" },
-  ],
-};
-
-const eleventhNewWig: Wig = {
-  name: "Angela",
-  collection: "",
-  price: "$710",
-  availbility:"Sold",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-inch Cap", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/taupe-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/taupe-blonde-24-front-alt.jpeg", label: "Full View" },
-  ],
-};
-
-const twelfthNewWig: Wig = {
-  name: "Snow",
-  collection: "",
-  price: "$810",
-  availbility:"Sold",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/platinum-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/platinum-blonde-24-front-alt.jpeg", label: "Front Detail" },
-    { src: "/images/products/platinum-blonde-24-closeup.jpeg", label: "Hairline Detail" },
-    { src: "/images/products/platinum-blonde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const thirteenthNewWig: Wig = {
-  name: "Jordan",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/honey-highlighted-brunette-24-front.jpeg", label: "Front" },
-    { src: "/images/products/honey-highlighted-brunette-24-full.jpeg", label: "Full View" },
-    { src: "/images/products/honey-highlighted-brunette-24-side.jpeg", label: "Side" },
-    { src: "/images/products/honey-highlighted-brunette-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const fourteenthNewWig: Wig = {
-  name: "Hope",
-  collection: "",
-  price: "$710",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22 inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/hope-front.jpeg", label: "Front" },
-    { src: "/images/products/hope-back.jpeg", label: "Front" },
-    { src: "/images/products/rooted-blonde-24-back.jpeg", label: "Back" },
-
-  ],
-};
-const fifthteenthNewWig: Wig = {
-  name: "Mandy",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/dark-rooted-golden-blonde-24-front.jpeg", label: "Front" },
-    { src: "/images/products/dark-rooted-golden-blonde-24-full.jpeg", label: "Full View" },
-    { src: "/images/products/dark-rooted-golden-blonde-24-side.jpeg", label: "Side" },
-    { src: "/images/products/dark-rooted-golden-blonde-24-back.jpeg", label: "Back" },
-  ],
-};
-
-const sixthteenthNewWig: Wig = {
-  name: "Precilla",
-  collection: "",
-  price: "$810",
-  availbility:"Sold",
-  specs: ["13×4 Frontal", "26 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/precilla-front.jpeg", label: "Front" },
-    { src: "/images/products/precilla-back.jpeg", label: "Back" },
-    { src: "/images/products/precilla-side.jpeg", label: "Side" },
-    { src: "/images/products/precilla-front2.jpeg", label: "Front" },
-  ],
-};
-const seventeenthNewWig: Wig = {
-  name: "Monica",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/monica-front.jpeg", label: "Front" },
-    { src: "/images/products/monica-back.jpeg", label: "Back" },
-    { src: "/images/products/monica-back2.jpeg", label: "Back" },
-    { src: "/images/products/monica-back3.jpeg", label: "Back" },
-  ],
-};
-const eightteenthNewWig: Wig = {
-  name: "Rachel",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-22.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/Rachel-front.jpeg", label: "Front" },
-    { src: "/images/products/Rachel-Back.jpeg", label: "Back" },
-    { src: "/images/products/Rachel-Side2.jpeg", label: "Side" },
-    { src: "/images/products/Rachel-side.jpeg", label: "Side" },
-  ],
-};
-const ninteenthNewWig: Wig = {
-  name: "Clair",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "24 Inches", "180% Density", "21.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 2"],
-  images: [
-    { src: "/images/products/Clair-Front.jpeg", label: "Front" },
-    { src: "/images/products/Clair-Back.jpeg", label: "Back" },
-    { src: "/images/products/Clair-Side.jpeg", label: "Side" },
-  ],
-};
-const twentythNewWig: Wig = {
-  name: "Katie",
-  collection: "",
-  price: "$810",
-  specs: ["13×4 Frontal", "26 Inches", "200% Density", "22-22.5-inch Cap", "Adjustable Drawstring", "Added Band", "3 Combs", "Cap-Type 1"],
-  images: [
-    { src: "/images/products/Katie-Front.jpeg", label: "Front" },
-    { src: "/images/products/Katie-Front2.jpeg", label: "Back" },
-  ],
-};
-
-const wigs = [firstNewWig, secondNewWig, thirdNewWig, fourthNewWig, fifthNewWig, seventhNewWig, eighthNewWig, ninthNewWig, tenthNewWig, eleventhNewWig, twelfthNewWig, thirteenthNewWig, fourteenthNewWig, fifthteenthNewWig, sixthteenthNewWig, seventeenthNewWig, eightteenthNewWig, ninteenthNewWig, twentythNewWig];
 
 const faqGroups = [
   {
@@ -405,7 +92,7 @@ function FAQ() {
         <p className="faq-help">If you have additional questions regarding wigs, installs, or custom orders, please reach out through our contact page.</p>
         <div className="faq-cta-row">
           <a href="/contact" className="btn-gold">Contact Us</a>
-          <a href="https://www.vagaro.com/miakelly/services" target="_blank" rel="noopener noreferrer" className="btn-book">Book an Appointment</a>
+          <a href="mailto:wigsbymiakelly@gmail.com?subject=Appointment%20Inquiry" target="_blank" rel="noopener noreferrer" className="btn-book">Book an Appointment</a>
           </div>
       </div>
     </div>
@@ -547,7 +234,7 @@ export default function HomePage() {
             <img src="/images/mia-signature-caps-dark.jpeg" alt="Mia Signature and Diamond wig cap construction styles" />
           </div>
           <div className="coll-group last-group">
-            <div className="wigs-row product-grid">{wigs.map((wig) => <WigCard wig={wig} key={wig.name} />)}</div>
+            <div className="wigs-row product-grid">{wigs.map((wig) => <WigCard wig={wig} key={wig.id} />)}</div>
           </div>
         </section>
 
@@ -587,7 +274,7 @@ export default function HomePage() {
                 ["Short Layers", "Structured short layers for volume, texture, and a polished finish.", "$60"],
               ].map(([name, description, price]) => <div className="svc-item" key={name}><div><div className="svc-name">{name}</div><div className="svc-desc">{description}</div></div><div className="svc-price">{price}</div></div>)}
               <p className="service-disclaimer">Pricing may vary depending on the length, density, and condition of the hair.</p>
-              <div className="book-strip"><p className="book-strip-text">Ready to book your appointment?</p><a href="https://www.vagaro.com/miakelly/services" target="_blank" rel="noopener noreferrer" className="btn-book">Book Now</a></div>
+              <div className="book-strip"><p className="book-strip-text">Ready to book your appointment?</p><a href="mailto:wigsbymiakelly@gmail.com?subject=Appointment%20Inquiry" target="_blank" rel="noopener noreferrer" className="btn-book">Book Now</a></div>
             </div>
             <div className="svc-card svc-dark">
               <p className="svc-label">Signature Treatment</p>

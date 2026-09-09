@@ -2,23 +2,13 @@
 
 import { useRef, useState } from "react";
 
-export type Wig = {
-  name: string;
-  collection: string;
-  price?: string;
-  originalPrice?: string;
-  images?: { src: string; label: string }[];
-  specs?: string[];
-  shopUrl?: string;
-  comingSoon?: boolean;
-  captype?:number;
-  availbility?:string;
-};
+import { type Wig } from "../catalog";
 
 export default function WigCard({ wig }: { wig: Wig }) {
   const [active, setActive] = useState(0);
   const touchStart = useRef(0);
   const images = wig.images ?? [];
+  const specs = [wig.lace, wig.length, wig.density, wig.capSize, ...(wig.features ?? [])].filter(Boolean);
   const inquiryHref = `mailto:wigsbymiakelly@gmail.com?subject=${encodeURIComponent(
     `Wig Inquiry - ${wig.name}`,
   )}&body=${encodeURIComponent(
@@ -29,7 +19,7 @@ export default function WigCard({ wig }: { wig: Wig }) {
   };
 
   return (
-    <article className={`wig-card ${wig.comingSoon ? "coming-card" : ""}`}>
+    <article className={`wig-card ${wig.status === "Coming Soon" ? "coming-card" : ""}`}>
       <div
         className="wig-gallery"
         onTouchStart={(event) => {
@@ -40,7 +30,7 @@ export default function WigCard({ wig }: { wig: Wig }) {
           if (Math.abs(distance) > 40) move(distance > 0 ? 1 : -1);
         }}
       >
-        {wig.originalPrice && <span className="sale-badge">Sale</span>}
+        {wig.status !== "Available" ? <span className="sale-badge">{wig.status}</span> : wig.originalPrice && <span className="sale-badge">Sale</span>}
         {images.length ? (
           <>
             {images.map((image, index) => (
@@ -66,28 +56,26 @@ export default function WigCard({ wig }: { wig: Wig }) {
         ) : (
           <div className="placeholder-card">
             <span>✦</span>
-            <p>Coming Soon</p>
+            <p>{wig.status === "Coming Soon" ? "Coming Soon" : "Photo Coming Soon"}</p>
           </div>
         )}
       </div>
       <div className="wig-info">
         <h4 className="wig-name">{wig.name}</h4>
-        <h4 className="wig-availability">{wig.availbility}</h4>
+        
+        {wig.description && <p className="wig-description">{wig.description}</p>}
         <div className="wig-specs">
-          {(wig.specs ?? ["26 inches", "13×4 Frontal"]).map((spec) => <span className="spec-pill" key={spec}>{spec}</span>)}
+          {specs.map((spec) => <span className="spec-pill" key={spec}>{spec}</span>)}
         </div>
         <div className="price-row">
-          <div className="wig-price">{wig.originalPrice && <del>{wig.originalPrice}</del>}{wig.price ?? "Dropping Soon"}</div>
+          <div className="wig-price">{wig.originalPrice && <del>{wig.originalPrice}</del>}{wig.price || (wig.status === "Coming Soon" ? "Coming Soon" : "Price on inquiry")}</div>
           {wig.price && <div className="price-note">*Insured shipping not included</div>}
         </div>
-        <a
-          href={wig.shopUrl ?? inquiryHref}
-          target={wig.shopUrl ? "_blank" : undefined}
-          rel={wig.shopUrl ? "noopener noreferrer" : undefined}
-          className="shop-btn"
-        >
-          {wig.shopUrl ? "Shop Now" : "Inquire"}
-        </a>
+        {wig.status === "Sold Out" ? (
+          <span className="shop-btn sold-out-label">Sold Out</span>
+        ) : (
+          <a href={inquiryHref} className="shop-btn">Inquire About This Wig</a>
+        )}
       </div>
     </article>
   );

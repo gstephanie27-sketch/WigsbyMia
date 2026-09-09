@@ -47,8 +47,8 @@ export default function ContactPage() {
             <h2>Ready to <em>Book an Appointment?</em></h2>
             <p>Book your hair service or wig install directly through our online booking system.</p>
             <div className="cta-btns">
-              <a href="https://www.vagaro.com/miakelly" target="_blank" rel="noopener noreferrer" className="btn-book">Book Now on Vagaro</a>
-              <a href="https://www.vagaro.com/miakelly/products" target="_blank" rel="noopener noreferrer" className="btn-gold">Shop Wigs</a>
+              <a href="mailto:wigsbymiakelly@gmail.com?subject=Appointment%20Inquiry" target="_blank" rel="noopener noreferrer" className="btn-book">Inquire About an Appointment</a>
+              <a href="/#collections" target="_blank" rel="noopener noreferrer" className="btn-gold">Shop Wigs</a>
             </div>
           </div>
         </section>
